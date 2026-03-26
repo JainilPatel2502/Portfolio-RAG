@@ -8,12 +8,12 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
-# llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash")
+llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash")
 embeddings = GoogleGenerativeAIEmbeddings(model="gemini-embedding-001")
 
-llm = ChatOpenRouter(
-    model="google/gemma-3-27b-it:free",
-)
+# llm = ChatOpenRouter(
+#     model="google/gemma-3-27b-it:free",
+# )
 # class OpenRouterEmbeddings(Embeddings):
 #     def __init__(self, model="nvidia/llama-nemotron-embed-vl-1b-v2:free"):
 #         self.model = model
