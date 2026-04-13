@@ -19,10 +19,10 @@ def load_and_split_pdfs(pdf_folder_path: str):
     splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=100)
     return splitter.split_documents(documents)
 
-from langchain_google_genai import GoogleGenerativeAIEmbeddings
+from langchain_openai import OpenAIEmbeddings
 from dotenv import load_dotenv
 load_dotenv()
-embeddings = GoogleGenerativeAIEmbeddings(model="gemini-embedding-001")
+embeddings = OpenAIEmbeddings(model='text-embedding-3-small')
 
 
 # class LMStudioEmbeddings(Embeddings):
